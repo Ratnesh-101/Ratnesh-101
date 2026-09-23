@@ -54,6 +54,12 @@ Developer passionate about AI/ML systems, agentic architectures, and high-perfor
   />
 </picture>
 
+<p align="center">
+  <a href="https://git.io/streak-stats">
+    <img src="https://streak-stats.demolab.com/?user=Ratnesh-101&theme=dark&background=12141a&border=2e3446&stroke=94a3b8&ring=a78bfa&fire=f87171&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=a78bfa&sideLabels=94a3b8" alt="Ratnesh's GitHub Streak" />
+  </a>
+</p>
+
 ## Daily.dev
 
 <p align="center">
