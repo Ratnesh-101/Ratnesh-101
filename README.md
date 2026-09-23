@@ -54,6 +54,14 @@ Developer passionate about AI/ML systems, agentic architectures, and high-perfor
   />
 </picture>
 
+## Daily.dev
+
+<p align="center">
+  <a href="https://app.daily.dev">
+    <img src="https://raw.githubusercontent.com/Ratnesh-101/Ratnesh-101/main/assets/devcard.png" width="320" alt="Ratnesh Singh's Dev Card"/>
+  </a>
+</p>
+
 ## Let's Connect
 
 I'm always open to collaborating on AI/ML, systems programming, and high-performance infrastructure projects. Feel free to reach out!
