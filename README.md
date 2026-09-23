@@ -57,7 +57,7 @@ Developer passionate about AI/ML systems, agentic architectures, and high-perfor
 ## Daily.dev
 
 <p align="center">
-  <a href="https://app.daily.dev">
+  <a href="https://daily.dev/ratneshsingh">
     <img src="https://raw.githubusercontent.com/Ratnesh-101/Ratnesh-101/main/assets/devcard.png" width="320" alt="Ratnesh Singh's Dev Card"/>
   </a>
 </p>
