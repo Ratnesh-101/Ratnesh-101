@@ -76,7 +76,6 @@ I'm always open to collaborating on AI/ML, systems programming, and high-perform
   <a href="mailto:mailratneshsingh05@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-000000?style=for-the-badge&logo=gmail&logoColor=white" /></a>
   <a href="https://linkedin.com/in/ratnesh-singh-307ab2267"><img src="https://img.shields.io/badge/LinkedIn-Connect-%23000000?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
   <a href="https://github.com/Ratnesh-101"><img src="https://img.shields.io/badge/GitHub-Follow-000000?style=for-the-badge&logo=github&logoColor=white" /></a>
-  <a href="https://instagram.com/ratnesh_.3"><img src="https://img.shields.io/badge/Instagram-Follow-%23000000?style=for-the-badge&logo=instagram&logoColor=white" /></a>
 </p>
 
 <div align="center">
