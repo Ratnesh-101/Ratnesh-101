@@ -1,40 +1,40 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:9f9f9f,100:000000&height=300&section=header&text=Ratnesh%20Singh&fontSize=60&animation=fadeIn&fontColor=FFFFFF&fontAlignY=35&desc=AI%2FML%20Engineer%20%7C%20Rust%20Enthusiast%20%7C%20Systems%20Developer&descAlignY=55&descAlign=50" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:9f9f9f,100:000000&height=300&section=header&text=Ratnesh%20Singh&fontSize=60&animation=fadeIn&fontColor=FFFFFF&fontAlignY=35&desc=AI%2FML%20Engineer%20%7C%20Agentic%20Systems%20%7C%20Full-Stack%20Developer&descAlignY=55&descAlign=50" width="100%"/>
 </div>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=ffffff&center=true&vCenter=true&width=550&lines=Rust+%26+Systems+Programming;AI%2FML+%26+Agentic+Architectures;High-Performance+Backends;Fast%2C+Safe+%26+Reliable+Code" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=ffffff&center=true&vCenter=true&width=550&lines=AI%2FML+%26+Agentic+Architectures;Autonomous+AI+Copilots;Full-Stack+AI+Applications;Fast%2C+Safe+%26+Reliable+Code" alt="Typing SVG" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Rust-%23000000.svg?&style=for-the-badge&logo=rust&logoColor=white" />
-  <img src="https://img.shields.io/badge/C-%23000000.svg?&style=for-the-badge&logo=c&logoColor=white" />
-  <img src="https://img.shields.io/badge/C%2B%2B-%23000000.svg?&style=for-the-badge&logo=c%2B%2B&logoColor=white" />
-  <img src="https://img.shields.io/badge/Java-%23000000.svg?&style=for-the-badge&logo=openjdk&logoColor=white" />
   <img src="https://img.shields.io/badge/Python-%23000000.svg?&style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-%23000000.svg?&style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-%23000000.svg?&style=for-the-badge&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-%23000000.svg?&style=for-the-badge&logo=fastapi&logoColor=white" />
   <img src="https://img.shields.io/badge/PyTorch-%23000000.svg?&style=for-the-badge&logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/TensorFlow-%23000000.svg?&style=for-the-badge&logo=tensorflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/LangChain-%23000000.svg?&style=for-the-badge&logo=chainlink&logoColor=white" />
   <img src="https://img.shields.io/badge/PostgreSQL-%23000000.svg?&style=for-the-badge&logo=postgresql&logoColor=white" />
   <img src="https://img.shields.io/badge/Streamlit-%23000000.svg?&style=for-the-badge&logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-%23000000.svg?&style=for-the-badge&logo=docker&logoColor=white" />
 </p>
 
 ## About Me
 
-Developer passionate about AI/ML systems, high-performance computing, and resilient infrastructure.
-- 🦀 **Exploring**: Rust internals, low-level optimization, distributed intelligence, and high-throughput inference engines.
-- 🛠️ **Building**: Intelligent agents with persistent memory ([Compass](https://github.com/Ratnesh-101/compass)), NLP & multi-source media analysis pipelines ([news-360-feedback](https://github.com/Ratnesh-101/news-360-feedback)), and video understanding tools ([youtube-ai-assistant](https://github.com/Ratnesh-101/youtube-ai-assistant)).
+Developer passionate about AI/ML systems, agentic architectures, and high-performance applications.
+- 🔭 **Exploring**: Autonomous agent architectures, multi-agent orchestration, and low-latency inference systems.
+- 🛠️ **Building**: Intelligent agents with persistent memory ([Compass](https://github.com/Ratnesh-101/compass)), AI field force intelligence systems ([Kheti Compass](https://github.com/Ratnesh-101/Syngenta)), multilingual sentiment & media intelligence pipelines ([news-360-feedback](https://github.com/Ratnesh-101/news-360-feedback)), and video understanding tools ([youtube-ai-assistant](https://github.com/Ratnesh-101/youtube-ai-assistant)).
 - 🎯 **Mission**: Architect production-grade software that seamlessly blends systems-level speed and safety with cutting-edge AI capabilities.
 
 ## Featured Repositories
 
 <!-- REPO-TABLE:START -->
-| Repo | Description | Stars |
-| --- | --- | --- |
-| [compass](https://github.com/Ratnesh-101/compass) | Personal AI assistant with persistent memory — tracks hackathon deadlines, recalls cross-repo code context, and coordinates workflows with Nemotron models. Web chat + CLI, one shared brain. | ⭐ 0 |
-| [news-360-feedback](https://github.com/Ratnesh-101/news-360-feedback) | AI-powered 360-degree feedback system for Government of India news stories across regional media — built with LangChain, Whisper, and Streamlit. | ⭐ 0 |
-| [youtube-ai-assistant](https://github.com/Ratnesh-101/youtube-ai-assistant) | An intelligent YouTube audio transcription & analysis engine powered by Whisper and Gemini with local fallback support. | ⭐ 1 |
-| [ccextractor](https://github.com/Ratnesh-101/ccextractor) | Fast, core video subtitle & stream extraction engine written in C. | ⭐ 0 |
-| [CCTV-Khumbmela1](https://github.com/Ratnesh-101/CCTV-Khumbmela1) | AI-driven computer vision and surveillance analytics system for large-scale crowd monitoring. | ⭐ 0 |
+| Project | Tech Stack | Description | Live Demo / Links |
+| --- | --- | --- | --- |
+| [compass](https://github.com/Ratnesh-101/compass) | `FastAPI` `React` `PostgreSQL` `Nemotron` `pgvector` | Autonomous personal AI agent with partitioned long-term memory across hackathons, repos, and coursework. Multi-tier LLM routing with SSE streaming. | [Live Demo](https://compass-farmlytics.vercel.app) |
+| [Syngenta (Kheti Compass)](https://github.com/Ratnesh-101/Syngenta) | `FastAPI` `React` `TypeScript` `Tailwind` `SQLite` | AI-guided field force visit priority engine (0–100) combining 8 agronomic signals with online gradient-feedback learning. (Syngenta AgriTech Hackathon) | [Live Demo](https://syngenta-nu.vercel.app) · [API Docs](https://kheti-compass.onrender.com/docs) |
+| [news-360-feedback](https://github.com/Ratnesh-101/news-360-feedback) | `Streamlit` `LangChain` `LangGraph` `Whisper` `FAISS` | Real-time multilingual news sentiment & policy feedback dashboard for Government of India ministries across regional media. (SIH 2024) | [Live Demo](https://news-360-feedback-18052906.streamlit.app/) |
+| [youtube-ai-assistant](https://github.com/Ratnesh-101/youtube-ai-assistant) | `Streamlit` `OpenAI` `Whisper` `yt-dlp` | Video audio extraction, transcription, and multi-mode summarization engine with resilient local fallback support. | [Repository](https://github.com/Ratnesh-101/youtube-ai-assistant) |
+| [langchain-trial](https://github.com/Ratnesh-101/langchain-trial) | `LangChain` `LangGraph` `Python` `wttr.in` | Conversational weather assistant with checkpointed thread memory, dynamic tool calling, and structured Pydantic outputs. | [Repository](https://github.com/Ratnesh-101/langchain-trial) |
 <!-- REPO-TABLE:END -->
 
 ## 📈 Dev Insights
