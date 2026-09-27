@@ -18,12 +18,16 @@
   <img src="https://img.shields.io/badge/Docker-%23000000.svg?&style=for-the-badge&logo=docker&logoColor=white" />
 </p>
 
+---
+
 ## About Me
 
 Developer passionate about AI/ML systems, agentic architectures, and high-performance applications.
 - 🔭 **Exploring**: Autonomous agent architectures, multi-agent orchestration, and low-latency inference systems.
 - 🛠️ **Building**: Intelligent agents with persistent memory ([Compass](https://github.com/Ratnesh-101/compass)), AI field force intelligence systems ([Kheti Compass](https://github.com/Ratnesh-101/Syngenta)), and multilingual sentiment & media intelligence pipelines ([news-360-feedback](https://github.com/Ratnesh-101/news-360-feedback)).
 - 🎯 **Mission**: Architect production-grade software that seamlessly blends systems-level speed and safety with cutting-edge AI capabilities.
+
+---
 
 ## Open To
 
@@ -32,6 +36,8 @@ Developer passionate about AI/ML systems, agentic architectures, and high-perfor
 - 🌐 Open Source Collaboration & Community Contributions
 - 🔬 Research Opportunities in Autonomous Agents & LLM Architectures
 - 🛠️ Full-Stack AI Development & Scalable Cloud Solutions
+
+---
 
 ## Featured Repositories
 
@@ -42,6 +48,8 @@ Developer passionate about AI/ML systems, agentic architectures, and high-perfor
 | [Syngenta (Kheti Compass)](https://github.com/Ratnesh-101/Syngenta) | `FastAPI` `React` `TypeScript` `Tailwind` `SQLite` | AI-guided field force visit priority engine (0–100) combining 8 agronomic signals with online gradient-feedback learning. (Syngenta AgriTech Hackathon) | [Live Demo](https://syngenta-nu.vercel.app) · [API Docs](https://kheti-compass.onrender.com/docs) |
 | [news-360-feedback](https://github.com/Ratnesh-101/news-360-feedback) | `Streamlit` `LangChain` `LangGraph` `Whisper` `FAISS` | Real-time multilingual news sentiment & policy feedback dashboard for Government of India ministries across regional media. (SIH 2024) | [Live Demo](https://news-360-feedback-18052906.streamlit.app/) |
 <!-- REPO-TABLE:END -->
+
+---
 
 ## AI / Machine Learning Expertise
 
@@ -59,33 +67,43 @@ Developer passionate about AI/ML systems, agentic architectures, and high-perfor
 
 </div>
 
+---
+
 ## Tech Stack
 
-### Programming Languages
+## Programming Languages
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,ts,js,cpp,c" />
 </p>
 
-### Frontend
+---
+
+## Frontend
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,html,css" />
 </p>
 
-### Backend & Databases
+---
+
+## Backend & Databases
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=fastapi,nodejs,express,postgres,sqlite,mongodb" />
 </p>
 
-### Cloud, DevOps & Tools
+---
+
+## Cloud, DevOps & Tools
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=docker,git,github,linux,vscode,postman" />
 </p>
 
-### Development Workflow
+---
+
+## Development Workflow
 
 | Category | Technologies |
 | :--- | :--- |
@@ -105,6 +123,8 @@ Developer passionate about AI/ML systems, agentic architectures, and high-perfor
 > *"Architecting production-grade software blending systems-level speed and safety with cutting-edge AI capabilities."*
 
 </div>
+
+---
 
 ## 📈 Dev Insights
 
@@ -129,6 +149,8 @@ Developer passionate about AI/ML systems, agentic architectures, and high-perfor
   </a>
 </p>
 
+---
+
 ## Daily.dev
 
 <p align="center">
@@ -136,6 +158,8 @@ Developer passionate about AI/ML systems, agentic architectures, and high-perfor
     <img src="https://raw.githubusercontent.com/Ratnesh-101/Ratnesh-101/main/assets/devcard.png" width="320" alt="Ratnesh Singh's Dev Card"/>
   </a>
 </p>
+
+---
 
 ## Let's Connect
 
