@@ -22,8 +22,16 @@
 
 Developer passionate about AI/ML systems, agentic architectures, and high-performance applications.
 - 🔭 **Exploring**: Autonomous agent architectures, multi-agent orchestration, and low-latency inference systems.
-- 🛠️ **Building**: Intelligent agents with persistent memory ([Compass](https://github.com/Ratnesh-101/compass)), AI field force intelligence systems ([Kheti Compass](https://github.com/Ratnesh-101/Syngenta)), multilingual sentiment & media intelligence pipelines ([news-360-feedback](https://github.com/Ratnesh-101/news-360-feedback)), and video understanding tools ([youtube-ai-assistant](https://github.com/Ratnesh-101/youtube-ai-assistant)).
+- 🛠️ **Building**: Intelligent agents with persistent memory ([Compass](https://github.com/Ratnesh-101/compass)), AI field force intelligence systems ([Kheti Compass](https://github.com/Ratnesh-101/Syngenta)), and multilingual sentiment & media intelligence pipelines ([news-360-feedback](https://github.com/Ratnesh-101/news-360-feedback)).
 - 🎯 **Mission**: Architect production-grade software that seamlessly blends systems-level speed and safety with cutting-edge AI capabilities.
+
+## Open To
+
+- 🚀 Software Engineering Internships & Full-Time Roles
+- 🤖 AI/ML & Agentic Systems Engineering Projects
+- 🌐 Open Source Collaboration & Community Contributions
+- 🔬 Research Opportunities in Autonomous Agents & LLM Architectures
+- 🛠️ Full-Stack AI Development & Scalable Cloud Solutions
 
 ## Featured Repositories
 
@@ -33,9 +41,70 @@ Developer passionate about AI/ML systems, agentic architectures, and high-perfor
 | [compass](https://github.com/Ratnesh-101/compass) | `FastAPI` `React` `PostgreSQL` `Nemotron` `pgvector` | Autonomous personal AI agent with partitioned long-term memory across hackathons, repos, and coursework. Multi-tier LLM routing with SSE streaming. | [Live Demo](https://compass-farmlytics.vercel.app) |
 | [Syngenta (Kheti Compass)](https://github.com/Ratnesh-101/Syngenta) | `FastAPI` `React` `TypeScript` `Tailwind` `SQLite` | AI-guided field force visit priority engine (0–100) combining 8 agronomic signals with online gradient-feedback learning. (Syngenta AgriTech Hackathon) | [Live Demo](https://syngenta-nu.vercel.app) · [API Docs](https://kheti-compass.onrender.com/docs) |
 | [news-360-feedback](https://github.com/Ratnesh-101/news-360-feedback) | `Streamlit` `LangChain` `LangGraph` `Whisper` `FAISS` | Real-time multilingual news sentiment & policy feedback dashboard for Government of India ministries across regional media. (SIH 2024) | [Live Demo](https://news-360-feedback-18052906.streamlit.app/) |
-| [youtube-ai-assistant](https://github.com/Ratnesh-101/youtube-ai-assistant) | `Streamlit` `OpenAI` `Whisper` `yt-dlp` | Video audio extraction, transcription, and multi-mode summarization engine with resilient local fallback support. | [Repository](https://github.com/Ratnesh-101/youtube-ai-assistant) |
-| [langchain-trial](https://github.com/Ratnesh-101/langchain-trial) | `LangChain` `LangGraph` `Python` `wttr.in` | Conversational weather assistant with checkpointed thread memory, dynamic tool calling, and structured Pydantic outputs. | [Repository](https://github.com/Ratnesh-101/langchain-trial) |
 <!-- REPO-TABLE:END -->
+
+## AI / Machine Learning Expertise
+
+<div align="center">
+
+| Domain | Proficiency | Details |
+| :--- | :---: | :--- |
+| **Agentic Architectures** | Advanced | Multi-Agent Orchestration, Persistent Partitioned Memory, LangGraph |
+| **Large Language Models (LLMs)** | Advanced | RAG Pipelines, Vector Retrieval (`pgvector`, FAISS), Prompt Engineering, SSE Streaming |
+| **Deep Learning** | Intermediate | PyTorch, Neural Networks, Supervised & Unsupervised Learning |
+| **Natural Language Processing** | Intermediate | Whisper (Speech-to-Text), Transformers, Multilingual Sentiment Analysis |
+| **Data Analysis & Modeling** | Advanced | NumPy, Pandas, Agronomic & Media Signal Feature Extraction |
+| **Model Deployment & Serving** | Advanced | FastAPI Microservices, Real-Time Streaming, Docker Containerization |
+| **Field Force Intelligence** | Advanced | 8-Signal Priority Ranking Engines, Online Gradient Feedback Learning |
+
+</div>
+
+## Tech Stack
+
+### Programming Languages
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,ts,js,cpp,c" />
+</p>
+
+### Frontend
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,html,css" />
+</p>
+
+### Backend & Databases
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=fastapi,nodejs,express,postgres,sqlite,mongodb" />
+</p>
+
+### Cloud, DevOps & Tools
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=docker,git,github,linux,vscode,postman" />
+</p>
+
+### Development Workflow
+
+| Category | Technologies |
+| :--- | :--- |
+| **Languages** | Python, TypeScript, JavaScript, C++, C, SQL |
+| **Frontend** | React, Next.js, Tailwind CSS, HTML5, CSS3, Streamlit |
+| **Backend** | FastAPI, Node.js, Express, REST APIs, SSE Streaming |
+| **Databases & Vectors** | PostgreSQL (`pgvector`), SQLite, MongoDB, FAISS |
+| **AI / ML & Agents** | PyTorch, LangChain, LangGraph, NVIDIA Nemotron, Whisper |
+| **DevOps & Cloud** | Docker, Git, GitHub Actions, Linux, Vercel, Render |
+| **IDEs & Tools** | VS Code, Postman, Cursor, Bash |
+| **Operating Systems** | Linux, Windows |
+
+<br>
+
+<div align="center">
+
+> *"Architecting production-grade software blending systems-level speed and safety with cutting-edge AI capabilities."*
+
+</div>
 
 ## 📈 Dev Insights
 

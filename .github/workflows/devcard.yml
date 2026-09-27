@@ -1,0 +1,37 @@
+name: Update Daily.dev Card
+
+on:
+  schedule:
+    # Run every 12 hours
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-devcard:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Latest DevCard
+        run: |
+          USER_ID="${{ secrets.USER_ID }}"
+          if [ -z "$USER_ID" ]; then
+            USER_ID="34fdkPGGPbMKiZhg0dR9w"
+          fi
+          mkdir -p assets
+          curl -sS -f "https://api.daily.dev/devcards/v2/${USER_ID}.png" -o assets/devcard.png
+          cp assets/devcard.png devcard.png
+
+      - name: Commit and Push Assets
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "chore: update daily.dev devcard [skip ci]"
+          add: "assets/devcard.png devcard.png"
