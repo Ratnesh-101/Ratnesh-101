@@ -5,17 +5,19 @@ Features:
   - Title bar with terminal dots
   - Colored key/value rows pulling real content from Ratnesh's profile:
     Now, Education, Highlights/projects, Focus, Status
-  - NO tech-stack row
+  - Most Used Languages section with segmented progress bar and percentage legend
   - Staggered line-by-line fade and slide in animation
   - Neofetch ANSI color palette blocks
   - Supports STATIC=1 env var for frozen frame
-  - Width 980 x Height 748 (scales to 490 x 374 in README)
+  - Width 980 x Height 748 (scales to 490 x 374 in README, matching avatar-ascii.svg)
 """
 import html
+import json
 import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(HERE, "..", "data", "contributions.json")
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "..", "info-card.svg")
 
 STATIC = bool(os.environ.get("STATIC"))
@@ -23,7 +25,7 @@ STATIC = bool(os.environ.get("STATIC"))
 CANVAS_W = 980
 CANVAS_H = 748
 TITLEBAR_H = 34
-PAD_X = 36
+PAD_X = 38
 ROW_START_Y = 82
 ROW_GAP = 34
 
@@ -55,7 +57,13 @@ ROWS = [
     ("kv", "Policy AI", "news-360-feedback — Gov of India ministries (SIH)", PURPLE),
     ("kv", "Focus", "Multi-Agent Orchestration & Low-Latency Inference", VAL_COLOR),
     ("kv", "Status", "Open to SWE Internships & Full-Time AI/ML Roles", GOLD),
-    ("kv", "Connect", "linkedin.com/in/ratnesh-singh-307ab2267", VAL_COLOR),
+]
+
+DEFAULT_LANGUAGES = [
+    {"name": "Python", "percent": 66.8, "color": "#38bdf8"},
+    {"name": "JavaScript", "percent": 18.9, "color": "#facc15"},
+    {"name": "TypeScript", "percent": 11.9, "color": "#60a5fa"},
+    {"name": "Other", "percent": 2.4, "color": "#8b949e"},
 ]
 
 ANSI_COLORS_NORMAL = [
@@ -64,6 +72,18 @@ ANSI_COLORS_NORMAL = [
 ANSI_COLORS_BRIGHT = [
     "#484f58", "#ffa198", "#56d364", "#e3b341", "#79c0ff", "#d2a8ff", "#56d4dd", "#ffffff"
 ]
+
+
+def load_languages():
+    if os.path.exists(DATA_PATH):
+        try:
+            with open(DATA_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if "languages" in data and data["languages"]:
+                    return data["languages"]
+        except Exception:
+            pass
+    return DEFAULT_LANGUAGES
 
 
 def render():
@@ -95,16 +115,16 @@ def render():
         f'<line x1="0" y1="{TITLEBAR_H}" x2="{CANVAS_W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>',
     ]
 
-    # Terminal buttons
+    # Terminal window buttons
     for i, dotcol in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
         parts.append(f'<circle cx="{PAD_X + i*16}" cy="{TITLEBAR_H/2}" r="5" fill="{dotcol}"/>')
     parts.append(f'<text x="{CANVAS_W/2}" y="{TITLEBAR_H/2 + 4}" fill="{TITLE_TEXT}" font-size="12" '
                  f'text-anchor="middle">ratnesh@github: ~ (neofetch)</text>')
 
-    # Rows
+    # Key-Value Rows
     y = ROW_START_Y
     anim_delay = 0.08
-    stagger = 0.065
+    stagger = 0.045
 
     for item in ROWS:
         kind = item[0]
@@ -142,18 +162,66 @@ def render():
             y += ROW_GAP
         anim_delay += stagger
 
-    # ANSI palette color blocks at bottom
-    palette_y = y + 14
-    block_w = 40
+    # --- Most Used Languages Section ---
+    languages = load_languages()
+    bar_w = CANVAS_W - PAD_X * 2
+    bar_h = 13
+    bar_y = y + 26
+
+    # Section Header
+    delay_attr = f'style="animation-delay:{anim_delay:.3f}s"' if not STATIC else ''
+    row_cls = 'class="row"' if not STATIC else ''
+    parts.append(
+        f'<g {row_cls} {delay_attr}>'
+        f'<line x1="{PAD_X}" y1="{y + 4}" x2="{CANVAS_W - PAD_X}" y2="{y + 4}" stroke="{FRAME}" stroke-opacity="0.5"/>'
+        f'<text x="{PAD_X}" y="{y + 20}" font-size="15" font-weight="700" fill="{KEY_COLOR}">Languages:</text>'
+        '</g>'
+    )
+    anim_delay += stagger
+
+    # Segmented Bar
+    delay_attr = f'style="animation-delay:{anim_delay:.3f}s"' if not STATIC else ''
+    parts.append(f'<g {row_cls} {delay_attr}>')
+    parts.append(f'<defs><clipPath id="lang-bar-clip">'
+                 f'<rect x="{PAD_X}" y="{bar_y}" width="{bar_w}" height="{bar_h}" rx="6"/>'
+                 f'</clipPath></defs>')
+    parts.append(f'<rect x="{PAD_X}" y="{bar_y}" width="{bar_w}" height="{bar_h}" rx="6" fill="#161b22"/>')
+    parts.append(f'<g clip-path="url(#lang-bar-clip)">')
+
+    cur_x = PAD_X
+    for lang in languages:
+        seg_w = bar_w * (lang["percent"] / 100.0)
+        parts.append(f'<rect x="{cur_x:.1f}" y="{bar_y}" width="{seg_w:.1f}" height="{bar_h}" fill="{lang["color"]}"/>')
+        cur_x += seg_w
+    parts.append('</g></g>')
+    anim_delay += stagger
+
+    # Language Legend with colored circle dots
+    legend_y = bar_y + 30
+    delay_attr = f'style="animation-delay:{anim_delay:.3f}s"' if not STATIC else ''
+    parts.append(f'<g {row_cls} {delay_attr}>')
+    slot_w = bar_w / len(languages)
+    for i, lang in enumerate(languages):
+        lx = PAD_X + i * slot_w
+        parts.append(f'<circle cx="{lx + 6:.1f}" cy="{legend_y - 4:.1f}" r="5" fill="{lang["color"]}"/>')
+        parts.append(
+            f'<text x="{lx + 18:.1f}" y="{legend_y}" font-size="13.5" fill="{VAL_COLOR}">'
+            f'{html.escape(lang["name"])} '
+            f'<tspan fill="{MUTED}">{lang["percent"]:.1f}%</tspan></text>'
+        )
+    parts.append('</g>')
+    anim_delay += stagger
+
+    # --- ANSI Palette Color Blocks at Bottom ---
+    palette_y = legend_y + 30
+    block_w = 46
     block_h = 18
-    block_gap = 6
-    total_pal_w = len(ANSI_COLORS_NORMAL) * (block_w + block_gap)
+    block_gap = 7
+    total_pal_w = len(ANSI_COLORS_NORMAL) * (block_w + block_gap) - block_gap
     pal_start_x = (CANVAS_W - total_pal_w) / 2
 
     pal_delay_attr = f'style="animation-delay:{anim_delay:.3f}s"' if not STATIC else ''
-    pal_cls = 'class="row"' if not STATIC else ''
-
-    parts.append(f'<g {pal_cls} {pal_delay_attr}>')
+    parts.append(f'<g {row_cls} {pal_delay_attr}>')
     for i, col in enumerate(ANSI_COLORS_NORMAL):
         bx = pal_start_x + i * (block_w + block_gap)
         parts.append(f'<rect x="{bx:.1f}" y="{palette_y:.1f}" width="{block_w}" height="{block_h}" rx="3" fill="{col}"/>')
