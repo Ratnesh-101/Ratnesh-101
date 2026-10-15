@@ -29,8 +29,8 @@ jobs:
       - name: Fetch real contribution data
         run: python scripts/fetch_contributions.py
 
-      - name: Render contribution heatmap SVG
-        run: python scripts/render_heatmap_svg.py
+      - name: Render animated contribution graph SVG
+        run: python scripts/generate_streak_svg.py Ratnesh-101 contrib-heatmap.svg
 
       - name: Render streak / numbers card
         run: python scripts/render_stats_svg.py
