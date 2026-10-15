@@ -2,9 +2,13 @@
 """
 Render data/contributions.json as an animated GitHub contribution heatmap SVG:
 a 53-week x 7-day calendar of rounded boxes with green palette:
-["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"],
-revealed once diagonally (left to right) via CSS keyframes (no looping),
-then freezes. Width 860.
+["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"].
+
+Uses Avi Vashishta's pop + flash keyframe animation:
+- Slower diagonal wave across the calendar (~4.8s reveal)
+- Contributed days pop out (scale 1.18) with a bright neon flash (brightness 2.6)
+- Empty days gently scale into view
+- Plays on load, then freezes. Width 860.
 """
 import datetime
 import json
@@ -34,10 +38,9 @@ ACCENT = "#22d3ee"
 GREEN = "#39d353"
 GOLD = "#f2cc60"
 
-# diagonal sweep timing
-COL_T = 0.018
-ROW_T = 0.045
-CELL_DUR = 0.42
+# Timing: smooth and slow diagonal cascade across 53 weeks
+REVEAL = 4.8
+DUR = 0.65
 
 
 def level_for(count):
@@ -106,14 +109,22 @@ def render(data):
     stats_h = 86
     canvas_h = int(TITLEBAR_H + TOP_LABEL_H + art_h + stats_h + 20)
 
+    # Pop + Flash keyframes matching AVIVASHISHTA29
     css = f"""
-@keyframes cell {{
-  0%   {{ opacity: 0; transform: translateY(-5px); }}
-  100% {{ opacity: 1; transform: translateY(0); }}
+.c {{ transform-box: fill-box; transform-origin: center; opacity: 0; animation: pop {DUR:.2f}s ease-out both; }}
+.g {{ animation: pop {DUR:.2f}s ease-out both, flash {DUR + 0.18:.2f}s ease-out both; }}
+@keyframes pop {{
+  0%   {{ opacity: 0; transform: scale(.15); }}
+  60%  {{ opacity: 1; transform: scale(1.18); }}
+  100% {{ opacity: 1; transform: scale(1); }}
 }}
-.c {{ opacity: 0; animation: cell {CELL_DUR:.2f}s cubic-bezier(.2,.8,.2,1) both; }}
+@keyframes flash {{
+  0%   {{ filter: brightness(2.6); }}
+  45%  {{ filter: brightness(2.6); }}
+  100% {{ filter: brightness(1); }}
+}}
 @media (prefers-reduced-motion: reduce) {{
-  .c {{ opacity: 1 !important; transform: none !important; animation: none !important; }}
+  .c, .g {{ opacity: 1 !important; transform: none !important; animation: none !important; }}
 }}
 """.strip()
 
@@ -145,6 +156,9 @@ def render(data):
         y = grid_top + wi * STEP + CELL * 0.78
         parts.append(f'<text x="{label_left:.1f}" y="{y:.1f}" fill="{MUTED}" font-size="9">{wname}</text>')
 
+    # Max order for normalized diagonal sweep
+    maxorder = (n_cols - 1) + 6 * 0.55
+
     for ci, column in enumerate(grid):
         gx = grid_left + ci * STEP
         for ri, cell in enumerate(column):
@@ -152,10 +166,11 @@ def render(data):
                 continue
             date_s, count, lvl = cell
             gy = grid_top + ri * STEP
-            delay = ci * COL_T + ri * ROW_T
+            delay = round((ci + ri * 0.55) / maxorder * REVEAL, 3)
+            cls = "c g" if lvl >= 1 else "c e"
             plural = "s" if count != 1 else ""
             parts.append(
-                f'<rect class="c" x="{gx:.1f}" y="{gy:.1f}" width="{CELL:.1f}" height="{CELL:.1f}" rx="2.5" '
+                f'<rect class="{cls}" x="{gx:.1f}" y="{gy:.1f}" width="{CELL:.1f}" height="{CELL:.1f}" rx="2.5" '
                 f'fill="{PALETTE[lvl]}" style="animation-delay:{delay:.3f}s">'
                 f'<title>{date_s}: {count} contribution{plural}</title></rect>'
             )
