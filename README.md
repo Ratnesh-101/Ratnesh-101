@@ -42,9 +42,17 @@
 <h3><code>ratnesh@github ~ $ ./connect.sh</code></h3>
 
 <p align="center">
-  <a href="mailto:mailratneshsingh05@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-0d1117?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://linkedin.com/in/ratnesh-singh-307ab2267"><img src="https://img.shields.io/badge/LinkedIn-Connect-0d1117?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="https://github.com/Ratnesh-101"><img src="https://img.shields.io/badge/GitHub-Follow-0d1117?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="mailto:mailratneshsingh05@gmail.com"><img src="https://img.shields.io/badge/GMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" /></a>
+  &nbsp;
+  <a href="https://linkedin.com/in/ratnesh-singh-307ab2267"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  &nbsp;
+  <a href="https://github.com/Ratnesh-101"><img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+</p>
+
+<br>
+
+<p align="center">
+  <em>"Bridging autonomous AI reasoning and robust systems engineering to build software that remembers, adapts, and scales."</em>
 </p>
 
 <br>
