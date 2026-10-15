@@ -10,16 +10,17 @@
 <br>
 <br>
 
-<!-- ascii portrait (left, width 370) + neofetch info card (right, width 490).
+<!-- ascii portrait (left) + streak/numbers card (right). both svgs are
+     840x880 so equal widths give equal heights.
      portrait: python scripts/prep_photo.py && python scripts/make_ascii_svg.py
-     card:     python scripts/make_info_card.py -->
+     stats:    python scripts/render_stats_svg.py (same daily workflow) -->
 
 <h3><code>ratnesh@github ~ $ whoami</code></h3>
 
 <table>
 <tr>
-<td valign="top" width="370"><img src="./avatar-ascii.svg" width="370" alt="Ratnesh Singh — ASCII portrait" /></td>
-<td valign="top" width="490"><img src="./info-card.svg" width="490" alt="Ratnesh Singh — Neofetch Info Card" /></td>
+<td valign="top"><img src="./avatar-ascii.svg" width="420" alt="Ratnesh Singh — ASCII portrait" /></td>
+<td valign="top"><img src="./stats.svg" width="420" alt="Ratnesh Singh — GitHub streak, active days, contribution velocity" /></td>
 </tr>
 </table>
 
