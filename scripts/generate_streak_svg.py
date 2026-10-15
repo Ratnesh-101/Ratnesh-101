@@ -46,8 +46,8 @@ W = LEFT + NW*(CELL+GAP) + 6
 H = TOP + 7*(CELL+GAP) + 22
 
 # timing (seconds)
-# REVEAL: total wave reveal time across 53 weeks (slower, smoother wave)
-REVEAL, DUR = 6.0, 0.75
+# REVEAL: total wave reveal time across 53 weeks (5.8s reveal)
+REVEAL, DUR = 5.8, 0.55
 maxorder = (NW-1) + 6*0.55
 
 rects, labels = [], []
