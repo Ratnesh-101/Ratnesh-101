@@ -11,6 +11,7 @@ Features:
   - Supports STATIC=1 env var for frozen frame
   - Width 980 x Height 748 (scales to 490 x 374 in README)
 """
+import html
 import os
 import sys
 
@@ -41,20 +42,20 @@ PURPLE = "#bc8cff"          # Soft purple
 MUTED = "#8b949e"           # Muted text
 
 ROWS = [
-    # (type, label, value, val_color, optional_badge)
-    ("header", "ratnesh", "github", ACCENT, None),
-    ("sep", "", "", MUTED, None),
-    ("kv", "OS", "Ubuntu / Linux Workspace (Arch & GitHub)", VAL_COLOR, None),
-    ("kv", "Host", "Autonomous Agentic Systems x64", VAL_COLOR, None),
-    ("kv", "Role", "AI/ML Engineer & Systems Developer", GOLD, None),
-    ("kv", "Now", "Building Compass (autonomous AI agent with memory)", ACCENT, None),
-    ("kv", "Education", "B.Tech in Computer Science & Engineering", VAL_COLOR, None),
-    ("kv", "Highlights", "Compass — persistent memory agent across repos", GREEN, None),
-    ("kv", "Projects", "Syngenta Kheti Compass — 8-signal visit priority", GREEN, None),
-    ("kv", "Policy AI", "news-360-feedback — Gov of India ministries (SIH)", PURPLE, None),
-    ("kv", "Focus", "Multi-Agent Orchestration & Low-Latency Inference", VAL_COLOR, None),
-    ("kv", "Status", "Open to SWE Internships & Full-Time AI/ML Roles", GOLD, None),
-    ("kv", "Connect", "linkedin.com/in/ratnesh-singh-307ab2267", VAL_COLOR, None),
+    # (type, label, value, val_color)
+    ("header", "ratnesh", "github", ACCENT),
+    ("sep", "", "", MUTED),
+    ("kv", "OS", "Ubuntu / Linux Workspace (Arch & GitHub)", VAL_COLOR),
+    ("kv", "Host", "Autonomous Agentic Systems x64", VAL_COLOR),
+    ("kv", "Role", "AI/ML Engineer & Systems Developer", GOLD),
+    ("kv", "Now", "Building Compass (autonomous AI agent with memory)", ACCENT),
+    ("kv", "Education", "B.Tech in Computer Science & Engineering", VAL_COLOR),
+    ("kv", "Highlights", "Compass — persistent memory agent across repos", GREEN),
+    ("kv", "Projects", "Syngenta Kheti Compass — 8-signal visit priority", GREEN),
+    ("kv", "Policy AI", "news-360-feedback — Gov of India ministries (SIH)", PURPLE),
+    ("kv", "Focus", "Multi-Agent Orchestration & Low-Latency Inference", VAL_COLOR),
+    ("kv", "Status", "Open to SWE Internships & Full-Time AI/ML Roles", GOLD),
+    ("kv", "Connect", "linkedin.com/in/ratnesh-singh-307ab2267", VAL_COLOR),
 ]
 
 ANSI_COLORS_NORMAL = [
@@ -111,7 +112,7 @@ def render():
         row_cls = 'class="row"' if not STATIC else ''
 
         if kind == "header":
-            user, host = item[1], item[2]
+            user, host = html.escape(item[1]), html.escape(item[2])
             parts.append(
                 f'<g {row_cls} {delay_attr}>'
                 f'<text x="{PAD_X}" y="{y}" font-size="18" font-weight="700">'
@@ -129,8 +130,7 @@ def render():
             )
             y += 24
         elif kind == "kv":
-            k, v, v_col = item[1], item[2], item[3]
-            # Key width padding
+            k, v, v_col = html.escape(item[1]), html.escape(item[2]), item[3]
             key_x = PAD_X
             val_x = PAD_X + 130
             parts.append(
