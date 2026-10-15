@@ -46,8 +46,8 @@ W = LEFT + NW*(CELL+GAP) + 6
 H = TOP + 7*(CELL+GAP) + 22
 
 # timing (seconds)
-# REVEAL: total wave reveal time across 53 weeks
-REVEAL, DUR = 3.8, 0.55
+# REVEAL: total wave reveal time across 53 weeks (slower, smoother wave)
+REVEAL, DUR = 6.0, 0.75
 maxorder = (NW-1) + 6*0.55
 
 rects, labels = [], []
@@ -76,9 +76,9 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewB
   text.lbl {{ fill:{GRAY}; font-size:13px; font-weight:600; }}
   text.total {{ fill:#e6edf3; font-size:15px; font-weight:700; }}
   .c {{ transform-box:fill-box; transform-origin:center; opacity:0; animation:pop {DUR}s ease-out both; }}
-  .g {{ animation:pop {DUR}s ease-out both, flash {DUR+0.15}s ease-out both; }}
-  @keyframes pop {{ 0%{{opacity:0;transform:scale(.2)}} 60%{{opacity:1;transform:scale(1.1)}} 100%{{opacity:1;transform:scale(1)}} }}
-  @keyframes flash {{ 0%{{filter:brightness(2.4)}} 45%{{filter:brightness(2.4)}} 100%{{filter:brightness(1)}} }}
+  .g {{ animation:pop {DUR}s ease-out both, flash {DUR+0.2}s ease-out both; }}
+  @keyframes pop {{ 0%{{opacity:0;transform:scale(.1)}} 60%{{opacity:1;transform:scale(1.18)}} 100%{{opacity:1;transform:scale(1)}} }}
+  @keyframes flash {{ 0%{{filter:brightness(2.8)}} 45%{{filter:brightness(2.8)}} 100%{{filter:brightness(1)}} }}
   @media (prefers-reduced-motion: reduce) {{ .c {{ opacity:1 !important; animation:none !important; }} }}
 </style>
 <rect width="{W}" height="{H}" fill="none"/>
